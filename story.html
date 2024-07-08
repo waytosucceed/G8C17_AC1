@@ -1,0 +1,225 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="Logo_last.png">
+      
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.5vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+            .table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            font-size: 18px;
+        }
+        th,td{
+            padding: 14px;
+            text-align: start;
+        }
+         th{
+            color: red;
+
+         }
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about"><i>Hummingbirds helped!</i></h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="intro.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;"> 
+
+                    When we talk to people our facial expressions, hand gestures and body language express our strong, mild, and weak emotions. How to express the same while writing? The English language provides a solution to this crisis by offering us with an abundance of words, phrases and expressions that we can use to express our emotions succinctly in writing. We also use them in our daily conversations. They are collectively called <span style="color: blue;">interjections</span>.
+                    <br><br>We must keep in mind that interjections are a grammatically independent part of speech. Thus, they can often be removed from a sentence without impacting its meaning.
+                </p> 
+            </div>
+        </center>     
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+           
+                  
+        </div>
+     
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg","Assets/14.jpg","Assets/15.jpg","Assets/16.jpg","Assets/17.jpg","Assets/18.jpg","Assets/19.jpg","Assets/20.jpg","Assets/21.jpg","Assets/22.jpg","Assets/23.jpg","Assets/24.jpg","Assets/25.jpg"];
+
+            var para=[ "Olivia: Hey!  Charlotte, when did you come back from vacation?<br><br>Charlotte: Ouch! You stepped on my toes. Day before yesterday Olivia. How have you been?<br><br>Olivia: Sorry. I am good. Why are you sitting here with a long face?<br><br>Charlotte: Oh! I cannot find the notebook where we both recorded all the research that we did on extinct birds for the project.<br><br> Olivia: Alas! What a loss. The project is due in seven days and we had invested around fifteen days just to study about extinct birds.",
+
+                       "Charlotte: Well, in that case we have to narrow down our focus area to something special about one or two birds. Since we don’t have much time, we won't be able to work a certain category of birds in detail.<br><br>Olivia: Ah, thank you for that input Charlotte. In that case, what do you think about hummingbirds? I have been reading about them while you were away.<br><br>Charlotte: I am in. Let's go!",
+
+                        "“<span style='color:blue'><i>Ouch! You stepped on my toes. Day before yesterday Olivia. How have you been?</i></span>”<br><br>“Ouch” in the above sentence is used to express pain.  <u>“Ouch”  is a primary interjection used as an emotive interjection</u>. Primary interjections are words or sounds that can only be used as an interjection. They do not have alternate meanings and thus cannot be used as other parts of speech like a noun, verb or an adjective.",
+
+                       "<span style='color:blue'><i>“Oh! I cannot find the notebook where we both recorded all the research that we did on extinct birds for the project.”</i></span><br><br>“Oh” in the above statement is an example of a primary interjection used to express dismay, concern, worry or disapproval.", 
+
+                       "<span style='color:blue'><i>“Uh! I don’t think sticking to birds is a good idea, let's work on something else this time.”</i></span><br><br>“Uh” in the above statement is used to express hesitation. It is an example of a primary interjection.<br><br> <span style='color:blue'><i>Come on! Charlotte.</i></span><br><br>“Come on” is an example of a volitive interjection. Volitive interjections are used to express an urgent request or command.",
+
+                       "<span style='color:blue'><i>“Ah, thank you for that input Charlotte.”</i></span><br><br>“Ah” in the above sentence is used to express joy and realisation. It is an example of a primary interjection. Also note that a mild interjection is followed by a comma and a strong interjection is followed by an exclamation mark. Thus, here “Ah” is a mild interjection. <br><br><span style='color:blue'><i>“I am in. Let's go!”</i></span><br><br>“Let’s go” is an example of a volitive interjection. Volitive interjections are used to express a desire or an urgent request.",
+
+                       "Olivia: New research shows that touch and air pressure on the wings and legs activate specific clusters of neurons in two regions of the forebrain to create a map of their body, which may help hummingbirds make nuanced adjustments to flight.<br><br>Charlotte: Phew! We finally have something really interesting to present.<br><br> Olivia: Not yet, there's more to it.<br><br> Charlotte: Oh no! Is it going to be a long presentation then?<br><br> Olivia: No Charlotte. Don’t worry about that.",
+
+                       "<span style='color:blue'><i>Phew! We finally have something really interesting to present.</i></span><br><br> “Phew” in the above sentence is used to express relief here. It is an example of an emotive interjection. Emotive interjections are used to express an emotion concerning a reaction to something. Charlotte was relieved to hear from Olivia something interesting about hummingbirds, which they can immediately include in their project and finish within a short period of time. ",
+
+                       "Did you know?<ul><li> Well and Indeed are the only two formal interjections acceptable in formal conversations. They are secondary interjections because they are words which have other lative meanings.</li><li>Interjections must be avoided in formal and academic writing</li><li>Interjections are not grammatically connected to other parts of a sentence</li></ul>",
+
+                       "<span style='color:brown'><u>Interjections are used to see people off /while parting:</u></span><br><br>Let us look at the sentences/expressions  below for better clarity: <br><br>Bye!<br><br>See you soon!",
+
+                       "Yes:<br>Father: Do you want to visit Disneyland?<br>Daughter: Yes!<br><br>Never:<br>Mother: Please get ready for your guitar classes.<br>Son: Never!<br>Mother: But why?<br>Son: The teacher is too strict and rude.",
+
+                       "<span style='color:brown'><u>Examples: Primary Interjection in sentences</u></span><br><br>Ugh! That’s horrible.<br>Yippee! We have been selected for the 2024 Summer Olympics.<br>Um-hum!We don’t think that will work. ",
+
+                       "<span style='color:brown'><u>Examples: Secondary Interjection in sentences</u></span><br><br>Shoot! I missed the last train.<br>Awesome! You really solve the Rubik’s cube at electric speed. <br>Goodness! You were really close to getting the job.",
+                       
+                       "<span style='color:brown'><u>Examples: Volitive Interjection in sentences</u></span><br><br>Hush! They are sleeping.<br>Ssh! The baby is sleeping<br>Psst. Please pass her the salt.<br>Ahem. Pay attention please.<br> Help! The patient is bleeding.",
+
+                      "<span style='color:brown'><u>Examples: Emotive Interjection in sentences</u></span><br><br>Yum! This cake is delectable.<br>Yay! I am really excited to have lunch with Ronaldo.<br> Ew! We are not eating here.",
+
+                      "<span style='color:brown'><u>Examples: Cognitive Interjection in sentences</u></span><br><br>Eureka!We have solved this puzzle!<br>Wow!We were not expecting this.<br>Um, could you please repeat your answer?",
+
+                        "<span style='background-color:yellow'><u>Strong Interjections:</u></span> A strong interjection is followed by an exclamation mark.<br>Example: Ew! That tasted awful.<br><br><span style='background-color:yellow'><u>Mild Interjections:</u></span>A mild interjection is followed by a comma in a sentence.<br>Example: Um, could you please explain the concept once more?"
+
+                       
+                    ]
+                    
+
+            
+
+
+
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Hummingbirds helped! ";
+                    document.getElementById("story").innerHTML = "2. Good God: is used to express surprise, outrage and horror<br>Surprise: Huh! Did I win again?<br>Scorn: Huh! Nobody can trust you.<br>Anger: Huh! She submitted the wrong file again. <br>Other Examples include:<br><br>3. Watch out!: Used as a volitive interjection to warn someone<br> 4. Don’t go!: Used as a command, thus as a volitive interjection to command<br>5.My goodness!: An emotive interjection used to express feelings of surprise,wonder, mild alarm, excitement."
+                    
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.5vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Hummingbirds helped! "
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+          
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.35vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "intro.jpg";
+                    document.getElementById("about").innerHTML="Hummingbirds helped! "
+                    document.getElementById("story").innerHTML = "<p id='story' style='text-align:left; width:100%;'> When we talk to people our facial expressions, hand gestures and body language express our strong, mild, and weak emotions. How to express the same while writing? The English language provides a solution to this crisis by offering us with an abundance of words, phrases and expressions that we can use to express our emotions succinctly in writing. We also use them in our daily conversations. They are collectively called <span style='color: blue;'>interjections</span>.<br><br>We must keep in mind that interjections are a grammatically independent part of speech. Thus, they can often be removed from a sentence without impacting its meaning.</p>"
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.5vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="Hummingbirds helped! "
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
